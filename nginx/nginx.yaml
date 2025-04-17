@@ -19,9 +19,9 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-          - name: local
-            mountPath: /usr/share/nginx/html
-      volumeMounts:
-        - name: local
-          hostPath:
-            path: /usr/share/nginx/html
+          - name: config-volume
+            mountPath: /config
+    volumes:
+    - name: config-volume
+      persistentVolumeClaim:
+      claimName: config-pvc
