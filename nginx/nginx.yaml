@@ -24,4 +24,4 @@ spec:
       volumeMounts:
         - name: local
           hostPath:
-            path: /user/share/nginx/html
+            path: /share/nginx/html
